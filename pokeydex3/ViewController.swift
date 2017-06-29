@@ -137,9 +137,6 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             collection.reloadData()
         }
         searchBar.text = ""
-        if let cancelButton = searchBar.value(forKey: "cancelButton") as? UIButton {
-            cancelButton.isEnabled = false
-        }
         searchBar.showsCancelButton = false
         view.endEditing(true)
     }
