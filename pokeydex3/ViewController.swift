@@ -122,6 +122,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             print("Cancel search")
             inSearchMode = false
             view.endEditing(true)
+            searchBar.showsCancelButton = false
         } else {
             inSearchMode = true
             let lower = searchBar.text!.lowercased()
@@ -139,6 +140,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         if let cancelButton = searchBar.value(forKey: "cancelButton") as? UIButton {
             cancelButton.isEnabled = false
         }
+        searchBar.showsCancelButton = false
         view.endEditing(true)
     }
     
